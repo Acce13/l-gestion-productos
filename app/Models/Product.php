@@ -15,6 +15,12 @@ class Product extends Model
         'category_id',
         'name',
         'description',
-        'price'
+        'price',
+        'original_price',
     ];
+
+    public function getPrice()
+    {
+        return number_format($this->price);
+    }
 }
